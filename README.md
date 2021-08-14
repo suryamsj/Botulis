@@ -20,19 +20,19 @@
 </p>
 
 <p align="center">
-  <a href="#botulis-tentang">Tentang</a> &#xa0; | &#xa0; 
-  <a href="#botulis-teknologi">Teknologi</a> &#xa0; | &#xa0;
-  <a href="#botulis-lisensi">Lisensi</a> &#xa0; | &#xa0;
+  <a href="#dart-tentang">Tentang</a> &#xa0; | &#xa0; 
+  <a href="#rocket-teknologi">Teknologi</a> &#xa0; | &#xa0;
+  <a href="#memo-lisensi">Lisensi</a> &#xa0; | &#xa0;
   <a href="https://github.com/suryamsj" target="_blank">Author</a>
 </p>
 
 <br>
 
-## :botulis: Tentang ##
+## :dart: Tentang ##
 
 Botulis adalah website untuk menjalankan bot yang bisa menulis dengan maksud untuk membantu kamu dalam menyalin / mencatat agar lebih cepat.
 
-## :botulis: Teknologi ##
+## :rocket: Teknologi ##
 
 Project ini menggunakan:
 
@@ -41,13 +41,17 @@ Project ini menggunakan:
 - [Sweetalert 2](https://sweetalert2.github.io/)
 - [Ihsandevs API](https://backend-ihsandevs.herokuapp.com/api/)
 
-## :botulis: Lisensi ##
+## :memo: Lisensi ##
 
 Project ini dibawah lisensi MIT. untuk lebih jelas, bisa lihat [LICENSE](LICENSE.md).
 
 
 Dibuat dengan :heart: oleh <a href="https://github.com/suryamsj" target="_blank">Muhammad Surya Jayadiprana</a>
 
+## :moneybag: Donasi ##
+
+<a href="https://trakteer.id/suryamsj/tip" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-3.jpg" height="40" style="border: 0px; height: 40px;" alt="Trakteer Saya"></a>
+
 &#xa0;
 
-<a href="#top">Kembali ke atas</a>
+<a href="#top">Back to top</a>
