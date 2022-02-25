@@ -39,7 +39,8 @@ Project ini menggunakan:
 - [PHP V7.4.14](https://www.php.net/)
 - [Bulma](https://bulma.io/)
 - [Sweetalert 2](https://sweetalert2.github.io/)
-- [Ihsandevs API](https://backend-ihsandevs.herokuapp.com/api/)
+- [Ihsandevs API](https://backend-ihsandevs.herokuapp.com/api/) (Sudah tidak aktif)
+- [Hadi Api](https://hadi-api.herokuapp.com/api) (Aktif)
 
 ## :memo: Lisensi ##
 
