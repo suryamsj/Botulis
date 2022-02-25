@@ -16,16 +16,20 @@
 <body>
     <!-- Tombol klik -->
     <?php
+    error_reporting(0);
     if (isset($_POST["kirim"])) {
         $teks = $_POST["tulisan"];
+        $media = $_POST["media"];
 
-        // Cek kalo teks tidak kosong
-        if (!empty($teks)) {
-            $url = "http://backend-ihsandevs.herokuapp.com/api/Nulis/?text=" . urlencode($teks);
-            $data = json_decode(file_get_contents($url), true);
-            $status = $data["status"];
-            $message = $data["message"];
-            $result = $data["result"];
+        // Cek kalo teks tidak kosong dan media tidak kosong
+        if (!empty($teks) && !empty($media)) {
+
+            // Cek kalo media adalah buku biasa (bb) / bukan
+            if ($media == "bb") {
+                $url = "https://hadi-api.herokuapp.com/api/canvas/nulis?text=" . urlencode($teks);
+            } else {
+                $url = "https://hadi-api.herokuapp.com/api/canvas/nulis2?text=" . urlencode($teks);
+            }
         }
         // Cek kalo teks kosong
         else {
@@ -94,6 +98,18 @@
                                 <div class="content">
                                     <form action="" method="post">
                                         <div class="field">
+                                            <label class="label">Media tulis</label>
+                                            <div class="control">
+                                                <div class="select is-100">
+                                                    <select name="media">
+                                                        <option disabled selected>Pilih media</option>
+                                                        <option value="bb">Buku biasa</option>
+                                                        <option value="hvs">HVS</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field">
                                             <label class="label">Teks</label>
                                             <div class="control">
                                                 <textarea class="textarea" placeholder="Masukkan teks yang akan ditulis.." name="tulisan" required></textarea>
@@ -126,11 +142,11 @@
                             </header>
                             <div class="card-content">
                                 <div class="content">
-                                    <?php if (!empty($result)) : ?>
+                                    <?php if (!empty($url)) : ?>
                                         <figure class="image is-square">
-                                            <img src="<?= $result['path'] ?>" alt="gambar bot" id="gambar_bot">
+                                            <img src="<?= $url ?>" alt="gambar bot" id="gambar_bot">
                                         </figure>
-                                        <a class="button is-link" href="<?= $result['path'] ?>" download="<?= $result['path'] ?>" target="_blank">Download</a>
+                                        <a class="button is-link" href="<?= $url ?>" download="<?= $url ?>" target="_blank">Download</a>
                                     <?php else : ?>
                                         <figure class="image is-square">
                                             <img src="asset/img/no-data-animate.svg" alt="gak ada gambar">
